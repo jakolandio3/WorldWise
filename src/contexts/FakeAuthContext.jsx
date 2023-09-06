@@ -18,7 +18,12 @@ function reducer(state, action) {
 		default:
 			throw new Error('user is not authorized');
 		case 'login':
-			return { ...state, user: action.payload, isAuthenticated: true };
+			return {
+				...state,
+				user: action.payload,
+				isAuthenticated: true,
+				error: '',
+			};
 		case 'logout':
 			return initialState;
 	}

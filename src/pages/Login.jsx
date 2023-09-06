@@ -14,13 +14,15 @@ export default function Login() {
 
 	function onLogin(e) {
 		e.preventDefault();
-		login(email, password);
+
+		if (email && password) login(email, password);
+		if (!email || !password) alert('Please enter a valid Email and Password');
 	}
 
 	useEffect(() => {
 		if (isAuthenticated === false) return;
-		navigate('/app');
-	}, [isAuthenticated]);
+		navigate('/app', { replace: true });
+	}, [isAuthenticated, navigate]);
 
 	return (
 		<main className={styles.login}>
@@ -33,6 +35,7 @@ export default function Login() {
 						id='email'
 						onChange={(e) => setEmail(e.target.value)}
 						value={email}
+						placeholder='Please enter Email...'
 					/>
 				</div>
 
@@ -43,6 +46,7 @@ export default function Login() {
 						id='password'
 						onChange={(e) => setPassword(e.target.value)}
 						value={password}
+						placeholder='Please enter Password...'
 					/>
 				</div>
 
