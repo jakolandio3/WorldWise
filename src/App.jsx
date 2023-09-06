@@ -9,6 +9,7 @@ import PageNotFound from './pages/PageNotFound';
 import AppLayout from './pages/AppLayout';
 import Login from './pages/Login';
 import CityList from './components/CityList';
+import ProtectedRoute from './pages/ProtectedRoute';
 
 import CountryList from './components/CountriesList';
 import City from './components/City';
@@ -28,7 +29,14 @@ export default function App() {
 							<Route path='pricing' element={<Pricing />} />
 							<Route index element={<HomePage />} />
 							<Route path='*' element={<PageNotFound />} />
-							<Route path='app' element={<AppLayout />}>
+							<Route
+								path='app'
+								element={
+									<ProtectedRoute>
+										<AppLayout />
+									</ProtectedRoute>
+								}
+							>
 								<Route index element={<Navigate replace to='cities' />} />
 								<Route path='cities' element={<CityList />} />
 								<Route path='cities/:id' element={<City />} />
