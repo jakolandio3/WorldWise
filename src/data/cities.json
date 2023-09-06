@@ -37,14 +37,14 @@
       "id": 98443207
     },
     {
-      "cityName": "Adelaide",
-      "country": "Australia",
-      "emoji": "🇦🇺",
-      "date": "2023-09-05T08:32:03.408Z",
-      "notes": "fgdgdg",
+      "cityName": "Torres Vedras",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2023-09-06T01:10:51.776Z",
+      "notes": "good soil",
       "position": {
-        "lat": "-34.926051899175796",
-        "lng": "138.59514985703066"
+        "lat": "39.12946049961347",
+        "lng": "-9.315416681793984"
       },
       "id": 98443208
     }
