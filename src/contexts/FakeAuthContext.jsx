@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer } from 'react';
 
 const AuthContext = createContext();
+
 const FAKE_USER = {
 	name: 'Jakob',
 	email: 'jakob@example.com',
@@ -49,6 +50,7 @@ function useAuth() {
 	const context = useContext(AuthContext);
 	if (context === undefined)
 		throw new Error('Auth context is being called outside of provider');
+	return context;
 }
 
 export { useAuth, AuthProvider };
