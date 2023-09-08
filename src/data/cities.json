@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -59,6 +47,54 @@
         "lng": "-3.706978288260499"
       },
       "id": 98443209
+    },
+    {
+      "cityName": "Adelaide",
+      "country": "Australia",
+      "emoji": "🇦🇺",
+      "date": "2023-09-06T06:24:15.398Z",
+      "notes": "little trip to Radelaide",
+      "position": {
+        "lat": "-34.9446287742828",
+        "lng": "138.6131286621094"
+      },
+      "id": 98443210
+    },
+    {
+      "cityName": "Xi Xian",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2014-06-09T06:25:24.000Z",
+      "notes": "Shoalin si",
+      "position": {
+        "lat": "36.914764288955936",
+        "lng": "111.04980468750001"
+      },
+      "id": 98443211
+    },
+    {
+      "cityName": "Ust-Kamchatsky District",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-09-06T06:27:35.577Z",
+      "notes": "",
+      "position": {
+        "lat": "56.36525013685609",
+        "lng": "161.36718750000003"
+      },
+      "id": 98443212
+    },
+    {
+      "cityName": "Nagoya",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2023-09-06T06:28:51.177Z",
+      "notes": "",
+      "position": {
+        "lat": "35.092945313732635",
+        "lng": "136.86767578125003"
+      },
+      "id": 98443213
     }
   ]
 }

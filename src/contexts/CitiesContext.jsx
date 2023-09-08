@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useCallback, useContext, useReducer } from 'react';
 import { useEffect } from 'react';
 
 const CitiesContext = createContext();
@@ -59,20 +59,23 @@ function CitiesProvider({ children }) {
 		[]
 	);
 
-	async function getCity(id) {
-		if (+id === currentCity.id) return;
-		dispatch({ type: 'loading', payload: true });
-		try {
-			const res = await fetch(`${BASE_URL}/cities/${id}`);
-			const data = await res.json();
-			dispatch({ type: 'cities/current', payload: data });
-		} catch (error) {
-			dispatch({
-				type: 'rejected',
-				payload: 'There was an error fetching the city',
-			});
-		}
-	}
+	const getCity = useCallback(
+		async function getCity(id) {
+			if (+id === currentCity.id) return;
+			dispatch({ type: 'loading', payload: true });
+			try {
+				const res = await fetch(`${BASE_URL}/cities/${id}`);
+				const data = await res.json();
+				dispatch({ type: 'cities/current', payload: data });
+			} catch (error) {
+				dispatch({
+					type: 'rejected',
+					payload: 'There was an error fetching the city',
+				});
+			}
+		},
+		[currentCity.id]
+	);
 	async function createCity(newCity) {
 		dispatch({ type: 'loading', payload: true });
 		try {
