@@ -19,7 +19,7 @@ import SpinnerFullPage from './components/SpinnerFullPage';
 // import Login from './pages/Login';
 // import AppLayout from './pages/AppLayout';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
+const HomePage = lazy(() => import('./pages/Homepage'));
 const Product = lazy(() => import('./pages/Product'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
