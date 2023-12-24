@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useReducer } from 'react';
 import { useEffect } from 'react';
 
 const CitiesContext = createContext();
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://testing-cities.onrender.com/api';
 
 const initialState = {
 	cities: [],
