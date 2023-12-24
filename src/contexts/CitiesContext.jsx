@@ -47,6 +47,7 @@ function CitiesProvider({ children }) {
 				dispatch({ type: 'loading' });
 				try {
 					const res = await fetch(`${BASE_URL}/cities`);
+					console.log(res);
 					const data = await res.json();
 					dispatch({ type: 'cities/loaded', payload: data });
 				} catch (error) {
@@ -59,6 +60,20 @@ function CitiesProvider({ children }) {
 		[]
 	);
 
+	async function fetchCitiesnew() {
+		dispatch({ type: 'loading' });
+		try {
+			const res = await fetch(`${BASE_URL}/cities`);
+			console.log(res);
+			const data = await res.json();
+			dispatch({ type: 'cities/loaded', payload: data });
+		} catch (error) {
+			dispatch({
+				type: 'rejected',
+				payload: 'There was an error loading the city list',
+			});
+		}
+	}
 	const getCity = useCallback(
 		async function getCity(id) {
 			if (+id === currentCity.id) return;
@@ -113,6 +128,7 @@ function CitiesProvider({ children }) {
 			value={{
 				cities,
 				isLoading,
+				fetchCitiesnew,
 				currentCity,
 				getCity,
 				createCity,
