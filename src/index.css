@@ -76,3 +76,29 @@ input:focus {
     "description": "Import CSS Module as `styles`"
   },
 */
+@media screen and (max-width: 600px) {
+	.app {
+		height: 100%;
+		width: 100%;
+		padding: opx;
+		overscroll-behavior-y: hidden;
+		display: flex;
+		position: relative;
+	}
+	.body {
+		margin: 0px;
+		padding: 0px;
+		width: 100vw;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+	}
+	.main {
+		width: 100vw;
+		height: 100%;
+		margin: 0px;
+		display: flex;
+		justify-items: center;
+		justify-content: center;
+	}
+}
