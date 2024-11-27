@@ -1,5 +1,3 @@
-// import React from 'react';
-
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
@@ -12,12 +10,6 @@ import CountryList from './components/CountriesList';
 import City from './components/City';
 import Form from './components/Form';
 import SpinnerFullPage from './components/SpinnerFullPage';
-// import Product from './pages/Product';
-// import Pricing from './pages/Pricing';
-// import HomePage from './pages/HomePage';
-// import PageNotFound from './pages/PageNotFound';
-// import Login from './pages/Login';
-// import AppLayout from './pages/AppLayout';
 
 const HomePage = lazy(() => import('./pages/Homepage'));
 const Product = lazy(() => import('./pages/Product'));

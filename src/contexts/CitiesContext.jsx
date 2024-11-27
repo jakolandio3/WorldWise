@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useReducer } from 'react';
 import { useEffect } from 'react';
 
 const CitiesContext = createContext();
-const BASE_URL = 'https://testing-cities.onrender.com/api';
+const BASE_URL = import.meta.env.VITE_DATABASE_URL;
 
 const initialState = {
 	cities: [],
